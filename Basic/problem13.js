@@ -21,10 +21,15 @@ function isPrimeNumber(num){
 
 // optimization : Even numbers are not prime numbers.
 
+// 2 is always prime.(special case)
+
 function isPrime2(num){
     let result =true;
 
-    if(num %2 ===0){ // is number is divisible by 2 then it is not prime.
+    if(num === 2){
+        result =true;
+    }
+    else if(num %2 ===0){ // is number is divisible by 2 then it is not prime.
         result=false;
     }
 
