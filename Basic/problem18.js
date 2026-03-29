@@ -9,26 +9,73 @@
 */
 
 
-function printPyramid(num){
 
-    for(let i=1 ; i<=num;i++){
 
-        let res='';
 
-        for(let j=1; j<=num ;j++){ 
+function  printPyramin(num)
+{
+  for(let i =1; i<=num ;i++){ //i =1; i =2
 
-          if(j <= num - i){          
-            res+=' ';
-          }else{
-            res+= (j - (num-i)) +' ';  
-          }
+        
+       // console.log(`need space in row ${i} ${num-i}`);
+
+       let result ="";  
+       // res=> _ _ _ _  1
+       // res=> _ _ _ 1  2
+
+        for(let j = 1 ; j<=num ;j++){ // j =1 => 1 < = 5  | 2<= 5 | 3 <= 5 | j =4 <=5 | j=5
+           
+                if(j <= num-i){  // 1 <= 3   | 2 <= 3 | 3<= 3 | 4 <= 3(x) | 5 <= 3 (x)
+                        result = result + " ";  // res => _ 
+                }else{ 
+                        result += j - (num-i)+ " ";  //            res=> 5 - (5-2) = 5-3 =2
+                }
         }
 
-        console.log(res);
-    }
+        console.log(result);
+
+  }
 }
 
-printPyramid(5)
+printPyramin(5);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Outer loop → i = 1 to 5 (rows)
 // Inner loop → j = 1 to 5 (columns)
